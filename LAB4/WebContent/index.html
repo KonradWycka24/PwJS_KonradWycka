@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title>Formularz Kontatkowy</title>
+  </head>
+  <body style="background-color: #e4e2e2;">
+    <h1>Formularz kontaktowy</h1>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <p class="invisible" id="errorName">Podanie Imienia jest wymagane!</p>
+                <label for="imie">Imię</label>
+                <input type="text" class="form-control" id="imie" >
+            </div>
+            <div class="form-group col-md-6">
+                <p class="invisible" id="errorName">Podanie Nazwiska jest wymagane!</p>
+                <label for="Nazwisko">Nazwisko</label>
+                <input type="text" class="form-control" id="nazwisko" >
+            </div>
+        </div>
+        <div class="form-group">
+            <p class="invisible" id="errorName">Podanie Emaila jest wymagane!</p>
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <p class="invisible" id="errorName">Podanie Informacji jest wymagane!</p>
+            <label for="informacja">Informacja</label>
+            <textarea class="form-control" id="informacja" rows="5"></textarea>
+        </div>
+       <button type="submit" class="btn btn-default" onclick="checkForm();">Wyślij </button>
+      </form>
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+      <script src="js/forms.js"></script>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

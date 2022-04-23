@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+     $(document).ready(function(){
+        $("#btn0").click(function(){
+        $("p").hide();});
+
+     $("#p1").hover(function(){
+     alert("J. Kochanowski");});
+     $("#flip").click(function(){
+         $("#panel").slideDown("slow");
+     });
+     $("#btn1").click(function(){
+$(".lista").append("<p>Dodatkowy wiersz</p>");
+});
+$("button").click(function(){
+$("h1, h2, p").addClass("blue");
+$("div").addClass("important");
+});
+});
+
+    </script>
+    <style>
+        #panel, #flip {
+            padding:5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border:solid 1px #c3c3c3;
+        }
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+    </head>
+    <body>
+<h5>==========Zadanie 1 i 2 =============</h5>
+<h2>Gdzie są fraszki?</h2>
+<p>Że krótkie fraszki czynię, to, Jakubie, winisz? </p>
+<p>Krótsze twoje nierówno, bo ich ty nie czynisz..</p>
+<p id="p">zmienic na p1 aby skrypt dzalał </p>
+
+<button id="btn0">Ukryj</button>
+<h5>==============Zadanie 3 ===============</h5>
+<div id="flip">Dodatkowe opcje...</div>
+<div id="panel">Rozwinąłeś panel dodatkowych ściśle tajnych opcji.</div>
+<h5>==============Zadanie 4 ==============</h5>
+<div class="lista"></div>
+
+<button id="btn1">Dodaj do listy</button>
+<h5>============Zadanie 5================</h5>
+
+    </body>
+</html>

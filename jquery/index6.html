@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery UI Datepicker - Default functionality</title>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$( function() {
+$( "#tabs" ).tabs();
+$( "#datepicker" ).datepicker();
+
+$("#z3").click(function(){
+$("#dialog").dialog();
+});
+
+});
+
+</script>
+</head>
+<body>
+<div id="tabs">
+<ul>
+<li><a href="#tabs-1">Zakładka 1</a></li>
+<li><a href="#tabs-2">Zakładka 2</a></li>
+<li><a href="#tabs-3" id="z3">Zakładka 3</a></li>
+</ul>
+<div id="tabs-1">
+<p>Tekst 1. Tekst 1. Tekst 1. Tekst 1. </p>
+</div>
+<div id="tabs-2">
+<p>Data: <input type="text" id="datapicker"></p>
+</div>
+<div id="tabs-3">
+    <div id="dialog" title="Tech spec">
+        <p>The outer display is a 4.6-inch HD+ Super AMOLED panel with a 21:9 aspect ratio. The
+        inner/main display of the Galaxy Fold is a large 7.3-inch QXGA+ Dyanic AMOLED canvas
+        with a form factor of 4.2:3.</p>
+        </div>
+        
+</div>
+</div>
+</body>
+</html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: 'Roboto', sans-serif;
     } 
@@ -12,4 +13,20 @@ svg {
 .navbar-brand img {
     
     height: 200%;
+=======
+body {
+    font-family: 'Roboto', sans-serif;
+    } 
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Oswald', sans-serif;
+    color: royalblue;
+}
+svg {
+    color: red;
+}
+
+.navbar-brand img {
+    
+    height: 200%;
+>>>>>>> 87b29913b636428e18937c3907e3e1e9cc7ddb36
 }

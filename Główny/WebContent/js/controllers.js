@@ -31,4 +31,16 @@ portfolioApp.controller('Gallery', function($scope) {
  'when':'2014-08-04',
  'thumbnailUrl':'img/i/Voidgod.png'
  }
-];}); 
+
+];
+$scope.sortList = [
+  {
+  'label':'Alfabetycznie',
+  'value':'title'
+  },
+  {
+  'label':'Chronologicznie',
+  'value':'when'
+  }
+  ]; 
+$scope.orderProp = 'when'; }); 

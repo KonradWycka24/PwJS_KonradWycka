@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title ></title>
   
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css" >
@@ -151,12 +151,26 @@ ariahidden="true"></span>
     <input type="submit" class="btn btn-primary" value="Wyślij"/>
     </form>
   </section>
+
   <section ng-controller='Gallery' id="Portfolio" class="jumbotron">
+
     <h1>Portfolio</h1>
-    <p>Wygenerowane prze AI zdjecia</p> 
-   <p> Ilosc elementów : {{galleries.length}} 
+    <p>Wygenerowane prze AI zdjecia</p>
+    
+    <p ng-bind-template=" Wynik wyszukwania dla : {{query}}"></p>
+   <p> Ilosc elementów : {{galleries.length}} </p>
+
+   <label>Sortuj:</label>
+   <select ng-model="orderProp" class="form-control">
+   <option value="title">Alfabetycznie</option>
+   <option value="when">Chronologicznie</option>
+   <select ng-model="orderProp" ng-options="sort as sort.label for sort in sortList"> 
+   </select> 
+   <p ng-if="orderProp">Galerie ułożone: {{orderProp}}</p> 
+
+    <input ng-model="query">
     <div class="row">
-      <div class="col-sm-4" ng-repeat="gallery in galleries">
+      <div class="col-sm-4" ng-repeat="gallery in galleries | filter:query | orderBy: orderProp.value">
        <img src="{{gallery.thumbnailUrl}}">
        <h3>{{gallery.title}}</h3>
        <p><strong>Kiedy:</strong> {{gallery.when |  date:'fullDate'}}</p>

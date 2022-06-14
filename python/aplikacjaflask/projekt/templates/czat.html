@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Czat</title>
+    </head>
+    <h1>Witamy w czacie {{ room }}</h1>
+    <div id="wiadomosci"></div>
+    <form id="message_input_form">
+        <input type="text" id="message_input" placeholder="Napisz tutaj wiadomość">
+        <button type="submit">Wyślij</button>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js"></script>
+    <script>
+        const socket = io.connect("http://127.0.0.1:5000");
+        socket.on('connect', function() {
+            socket.emit('dol_pokoj',
+            {
+                username: " {{ username }} ",
+                room:  " {{ room }}"
+            });
+
+            let message_input = document.getElementById('message_input');
+
+            document.getElementById('message_input_form').onsubmit = function (e) {
+                e.preventDefault();
+                let message = message_input.value.trim();
+                if (message.length) {
+                    socket.emit('wyslij_wiadomosc', {
+                        username: " {{ username }} ",
+                        room:  " {{ room }}",
+                        message: message
+                    })
+
+                }
+                message_input.value='';
+                message_input.focus();
+            }
+        });
+
+        socket.on('otrzymaj_wiadomosc', function (data){
+            console.log('data');
+            const newNode = document.createElement('div');
+            newNode.innerHTML =`<b>${data.username}: &nbsp; </b> ${data.message}`;
+            document.getElementById('wiadomosci').appendChild(newNode);
+
+        })
+
+        socket.on('Ogl_dol_room', function(data) {
+            console.log('data');
+            const newNode = document.createElement('div');
+            newNode.innerHTML =`<b>${data.username}<b> dołaczył do pokoju`;
+            document.getElementById('wiadomosci').appendChild(newNode);
+        })
+    </script>
+</html>

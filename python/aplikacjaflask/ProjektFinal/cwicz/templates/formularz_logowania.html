@@ -1,0 +1,12 @@
+{% extends "baza.html" %}
+{% block content %}
+
+<h1> Login</h1>
+
+<form method="POST" action="">
+    {{ form.hidden_tag() }}
+    {{ form.username }}
+    {{ form.password }}
+    {{ form.submit }}
+</form>
+{% endblock %}

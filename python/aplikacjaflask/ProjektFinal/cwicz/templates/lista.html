@@ -1,0 +1,22 @@
+{% extends "baza.html" %}
+{% block content %}
+<h1>Lista studentów</h1>
+ <table border = 1>
+ <thead>
+ <td>Imie i Nazwisko</td>
+ <td>Numer Pracownika</td>
+ <td>Adres</td>
+ 
+ </thead>
+
+ {% for rekord in rekordy %}
+ <tr>
+ <td>{{rekord["imieinazwisko"]}}</td>
+ <td>{{rekord["nrpracownika"]}}</td>
+ <td>{{rekord["adres"]}}</td>
+ 
+ </tr>
+ {% endfor %}
+ </table>
+
+{% endblock %}

@@ -1,0 +1,6 @@
+{% extends "baza.html" %}
+{% block content %}
+{% for post in posty %}
+<div><p> {{post.author.username}} napisał <b>{{post.body}}</b></p></div>
+{% endfor %}
+{% endblock %}

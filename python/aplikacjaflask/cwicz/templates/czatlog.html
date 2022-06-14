@@ -1,0 +1,16 @@
+{% extends "baza.html" %}
+{% block content %}
+        <h1>Aplikacja do czatu</h1>
+        
+        <form action="/chat">
+            <div>
+                
+                <input type="text" name='username' value ='{{ current_user.username }}'  >
+            </div>
+            <div>
+                <label> Podaj pokój:</label>
+                <input type="text" name='room'>
+            </div>
+            <button type="submit">Wejdz</button>
+        </form>
+        {% endblock %}
